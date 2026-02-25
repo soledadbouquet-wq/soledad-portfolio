@@ -1,167 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>María Soledad Bouquet | Professional Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>María Soledad Bouquet | Perfil Profesional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#f4f7fb;color:#1f2937}
-header{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:white;padding:80px 20px;text-align:center;position:relative}
-.profile-img{width:150px;height:150px;border-radius:50%;border:4px solid white;object-fit:cover;margin-bottom:20px}
-.lang-switch{position:absolute;top:20px;right:20px}
-.lang-switch button{margin-left:8px;padding:6px 12px;border:none;border-radius:20px;cursor:pointer;font-weight:600}
-section{max-width:1100px;margin:70px auto;padding:0 20px}
-h2{font-size:28px;margin-bottom:30px;border-left:6px solid #2c5364;padding-left:12px}
-.card{background:white;padding:25px;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,0.05);margin-bottom:25px}
-.timeline{border-left:3px solid #2c5364;padding-left:30px}
-.timeline-item{margin-bottom:40px;position:relative}
-.timeline-item::before{content:'';position:absolute;left:-38px;top:5px;width:15px;height:15px;background:#2c5364;border-radius:50%}
-.skills span{display:inline-block;background:#2c5364;color:white;padding:8px 14px;border-radius:25px;margin:6px;font-size:14px}
-.btn{display:inline-block;margin-top:20px;padding:12px 22px;background:white;color:#2c5364;border-radius:30px;font-weight:600;text-decoration:none}
-footer{text-align:center;padding:30px;background:#2c5364;color:white;margin-top:60px}
-</style>
+        header {
+            background-color: #0a2a66;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-<script>
-function setLanguage(lang){
- document.querySelectorAll('[data-lang]').forEach(el=>{
-  el.style.display=(el.getAttribute('data-lang')===lang)?'block':'none';
- });
-}
-</script>
+        .foto-perfil {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 10px 0 5px 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+
+        .btn-cv {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #ffffff;
+            color: #0a2a66;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-cv:hover {
+            background-color: #dce3f5;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #0a2a66;
+            border-bottom: 2px solid #0a2a66;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #0a2a66;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .foto-perfil {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
 </head>
 
-<body onload="setLanguage('es')">
+<body>
 
 <header>
-<div class="lang-switch">
-<button onclick="setLanguage('es')">ES</button>
-<button onclick="setLanguage('en')">EN</button>
-</div>
-<img src="foto.perfil.jpg" class="profile-img">
-<h1>María Soledad Bouquet</h1>
-<p data-lang="es">Operations & Process Optimization Specialist | Banking Operations | IATA & Collections</p>
-<p data-lang="en" style="display:none;">Operations & Process Optimization Specialist | Banking Operations | IATA & Collections</p>
-<p data-lang="es">Profesional autónoma, organizada, orientada al detalle y proactiva, con alta adaptabilidad y excelente gestión del tiempo.</p>
-<p data-lang="en" style="display:none;">Autonomous, detail-oriented, organized and proactive professional with strong adaptability and excellent time management skills.</p>
-<a href="MARIA SOLEDAD BOUQUET_CV.pdf" class="btn" download>Download CV (ES)</a>
-<a href="MARIA SOLEDAD BOUQUET_CV_EN.pdf" class="btn" download>Download CV (EN)</a>
+
+    <!-- FOTO -->
+    <img src="foto-perfil.jpg" alt="Foto de María Soledad Bouquet" class="foto-perfil">
+
+    <h1>María Soledad Bouquet</h1>
+    <p>Traductora Freelance EN< >SP | Analista SSR en Operaciones Bancarias</p>
+    <p>Buenos Aires, Argentina | +54 11 6161 1189 | soledad.bouquet@gmail.com</p>
+    
+    <a href="Maria_Soledad_Bouquet_CV_ES.pdf" class="btn-cv" target="_blank">
+        Descargar CV en español
+    <a href="MARIA SOLEDAD BOUQUET_RESUME.pdf" class="btn-cv" target="_blank">
+        Descargar CV en ingles
+    </a>
 </header>
 
 <section>
-<h2 data-lang="es">Perfil Profesional</h2>
-<h2 data-lang="en" style="display:none;">Professional Profile</h2>
-<div class="card" data-lang="es">
-Profesional en Operaciones con más de 15 años de experiencia en la industria bancaria, especializada en banking operations, process improvement, SLA compliance, KPI monitoring y control operativo. Experiencia liderando mejoras de procesos, gestión de convenios de recaudación e IATA, mitigación de riesgos operativos y soporte a stakeholders internos y clientes corporativos en entornos de alta exigencia.
-</div>
-<div class="card" data-lang="en" style="display:none;">
-Operations professional with over 15 years of experience in the banking industry, specialized in banking operations, process improvement, SLA compliance, KPI monitoring, and operational risk control. Proven track record managing collection agreements and IATA operations, driving efficiency initiatives, and supporting corporate clients and cross-functional stakeholders in high-demand environments.
-</div>
+    <h2>Perfil Profesional</h2>
+    <div class="card">
+        <p>
+            Profesional con más de 15 años de experiencia en operaciones bancarias, gestión de recaudaciones y atención a clientes corporativos.
+            Traductora Pública especializada en traducción médica, farmacológica y localización de videos juegos, páginas web y app móviles.
+        </p>
+        <p>
+            Orientada al detalle, a la mejora continua, precisión terminológica y optimización de procesos.
+        </p>
+    </div>
 </section>
 
 <section>
-<h2 data-lang="es">Experiencia Profesional</h2>
-<h2 data-lang="en" style="display:none;">Professional Experience</h2>
-<div class="timeline">
-<div class="timeline-item">
-<strong>Banco Santander</strong>
-<p data-lang="es"><b>Analista Ssr – Recaudaciones & IATA (2019–Actualidad)</b><br>
-• End-to-end management of collection agreements and IATA operations ensuring regulatory compliance and operational accuracy.<br>• Process optimization initiatives improving control and monitoring workflows.<br>• SLA tracking and KPI reporting to ensure service level performance.<br>• Cross-functional coordination with Operations, Finance and corporate clients.<br>• Operational risk mitigation and continuous improvement support.</p>
-<p data-lang="en" style="display:none;"><b>Senior Analyst – Collections & IATA (2019–Present)</b><br>
-Management of collection agreements and IATA operations, process optimization, monitoring controls, and functional support for corporate clients and internal areas.</p>
-</div>
+    <h2>Experiencia Profesional</h2>
 
-<div class="timeline-item">
-<p data-lang="es"><b>Coordinadora – Centro de Atención a Clientes (2018–2019)</b><br>
-• SLA monitoring and performance tracking aligned with operational KPIs.<br>• Corporate client documentation management and compliance control.<br>• Coordination with Operations teams to improve service efficiency.</p>
-<p data-lang="en" style="display:none;"><b>Coordinator – Customer Service Center (2018–2019)</b><br>
-SLA compliance monitoring and corporate client documentation follow-up.</p>
-</div>
+    <div class="card">
+        <h3>Banco Santander — Analista SSR Recaudaciones & IATA (2019 – Actualidad)</h3>
+        <ul>
+            <li>Administración de convenios de recaudación e IATA.</li>
+            <li>Control de pagos a empresas y aerolíneas.</li>
+            <li>Optimización de procesos operativos.</li>
+            <li>Soporte a clientes corporativos.</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>Banco Santander — Coordinadora Centro de Atención al Cliente (2018 – 2019) </h3>
+        <ul>
+            <li>Control de cumplimiento de SLA en coordinación con áreas operativas.</li>
+            <li>Coordinación de tareas operativas del equipo de atención.</li>
+        </ul>
+    </div>
+    
+       <div class="card">
+        <h3>Banco Santander — Atención al Público / Mesa Pagadora (2011 – 2018)  </h3>
+        <ul>
+            <li>Autorización y control de extracciones en mesa pagadora. </li>
+            <li>Atención personalizada a clientes en sucursal. </li>
+            <li>Reconocimiento por calidad de atención y cumplimiento normativo. </li>
+        </ul>
+    </div>
+    
+     <div class="card">
+        <h3>Banco Santander — Asistente de Gerencia (2010 – 2011)   </h3>
+        <ul>
+            <li>Coordinación de agenda ejecutiva y organización de reuniones.</li>
+            <li>Soporte administrativo y documental a la gerencia.</li>
+        </ul>
+    </div>
 
-<div class="timeline-item">
-<p data-lang="es"><b>Atención al Público – Mesa Pagadora (2011–2018)</b><br>
-• Front-office banking operations and transactional control.<br>• Cash handling supervision and withdrawal authorization under compliance standards.<br>• Card issuance and rejected check resolution.<br>• Customer experience improvement aligned with operational policies.</p>
-<p data-lang="en" style="display:none;"><b>Customer Service – Teller Desk (2011–2018)</b><br>
-Branch customer service, withdrawals control, card delivery, and rejected checks management.</p>
-</div>
+    <div class="card">
+        <h3>Traductora Freelance</h3>
+        <ul>
+            <li>Traducción médica y farmacológica.</li>
+            <li>Subtitulado y localización de videojuegos, páginas web y apps móviles.</li>
+            <li>Proofreading y MTPE.</li>
+            <li>Uso de herramientas CAT (MemoQ, Xbench).</li>
+        </ul>
+    </div>
 
-<div class="timeline-item">
-<p data-lang="es"><b>Asistencia de Gerencia (2010–2011)</b><br>
-• Executive support in operational planning and project coordination.<br>• Administrative process organization and documentation control.<br>• Internal communication and stakeholder support.</p>
-<p data-lang="en" style="display:none;"><b>Executive Assistant (2010–2011)</b><br>
-Executive agenda coordination, meetings organization, and administrative support.</p>
-</div>
-</div>
 </section>
 
 <section>
-<h2 data-lang="es">Educación</h2>
-<h2 data-lang="en" style="display:none;">Education</h2>
-<div class="card" data-lang="es">
-Traductorado Público en Idioma Inglés — Universidad del Museo Social Argentino (2007–2012)
-</div>
-<div class="card" data-lang="en" style="display:none;">
-Certified Public Translator (English) — Universidad del Museo Social Argentino (2007–2012)
-</div>
+    <h2>Formación Académica</h2>
+    <div class="card">
+        <p><strong>Traductora Pública en idioma  Inglés</strong> - Universidad del Museo Social Argentino (2007-2012)</p>
+        <p><strong>Bachillerato con orientación en Informática</strong> - Instituto secundario Ntra. Sra. del Carmen (1996-2000)</p>
+    </div>
 </section>
 
 <section>
-<h2 data-lang="es">Idiomas</h2>
-<h2 data-lang="en" style="display:none;">Languages</h2>
-<div class="card" data-lang="es">Inglés avanzado (oral, escrito y comprensión)</div>
-<div class="card" data-lang="en" style="display:none;">Advanced English (spoken, written and comprehension)</div>
+    <h2>Herramientas y Competencias</h2>
+    <div class="card">
+        <p><strong>Herramientas:</strong> Microsoft Office (Word, Excel, Powerpoint, Visio), Power BI, SQL.</p>
+          <p><strong>Herramientas colaborativas:</strong> Sharepoint, Jira, Miro.</p>
+        <p><strong>Herramientas de asistencia a la traducción:</strong> MemoQ, Xbench, Aegisub.</p>
+        <p><strong>Habilidades:</strong> Atención al detalle, gestión del tiempo, autonomía, investigación terminológica avanzada.</p>
+        <p><strong>Idioma:</strong> Inglés avanzado.</p>
+    </div>
 </section>
 
 <section>
-<h2 data-lang="es">Competencias Técnicas</h2>
-<h2 data-lang="en" style="display:none;">Technical Skills</h2>
-<div class="skills">
-<span>Excel</span>
-<span>Power BI</span>
-<span>SQL</span>
-<span>Microsoft Office</span>
-<span>Visio</span>
-<span>Outlook</span>
-<span>Process Optimization</span>
-<span>SLA Management</span>
-</div>
+    <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="maria-soledad-bouquet" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ar.linkedin.com/in/maria-soledad-bouquet?trk=profile-badge">Maria Soledad Bouquet</a></div>                           
 </section>
 
-<section>
-<h2 data-lang="es">Habilidades Blandas</h2>
-<h2 data-lang="en" style="display:none;">Soft Skills</h2>
-<div class="skills" data-lang="es">
-<span>Autonomía</span>
-<span>Atención al detalle</span>
-<span>Adaptabilidad</span>
-<span>Organización</span>
-<span>Gestión del tiempo</span>
-<span>Proactividad</span>
-</div>
-<div class="skills" data-lang="en" style="display:none;">
-<span>Autonomy</span>
-<span>Attention to detail</span>
-<span>Adaptability</span>
-<span>Organization</span>
-<span>Time management</span>
-<span>Proactivity</span>
-</div>
-</section>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
-<section>
-<h2 data-lang="es">Contacto</h2>
-<h2 data-lang="en" style="display:none;">Contact</h2>
-<div class="card">
-<p>Buenos Aires, Argentina</p>
-<p>Email: soledad.bouquet@gmail.com</p>
-<p>Tel: +54 11 6161 1189</p>
-</div>
-</section>
 
 <footer>
-© 2026 María Soledad Bouquet
+    © 2026 María Soledad Bouquet
 </footer>
 
 </body>
